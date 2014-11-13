@@ -2,7 +2,6 @@
 
 > A tiny Template-Engine (224 bytes) mixing up HTML and pure JavaScript in one template
 
-<br><br>
 
 ### Example
 
