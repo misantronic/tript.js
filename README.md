@@ -15,21 +15,21 @@ And the best part: tript is so small! Only **224 bytes**!!
 <!-- TEMPLATE -->
 <script id="template" type="text/html">
 	<div id="content">
-		<p>Start of container</p>
-	
-		var tests = [ { name: 'David' }, { name: 'Max' }, { name: 'Bob' } ];
+		<h1>$app</h1>
+		<div style="font-weight: bold;">$headline</div>
+		<p>$description</p>
+
+		var users = [ { name: 'David' }, { name: 'Max' }, { name: 'Bob' } ];
 		var _animal = "Crow";
-	
-		for(var i in tests) {
-			<h1>
-				<b>Headline $i for $user</b>
-			</h1>
-			<pre>Hallo <% tests[i].name %></pre>
-			<p>Test $i</p>
+
+		for(var i in users) {
+			<h3>
+				<b>Good guy <% users[i].name %></b>
+			</h3>
+			<p>You are number $i</p>
 		}
-	
-		<p>The Animal: $_animal</p>
-		<p>End of container</p>
+
+		<p>Your show know: my favorite animal is the $_animal</p>
 	</div>
 </script>
 ```
@@ -37,7 +37,9 @@ And the best part: tript is so small! Only **224 bytes**!!
 ```javascript
 // set context
 var context = {
-	user: 'David Skx'
+	app: 'tript',
+	headline: 'A tiny Template-Engine mixing up HTML and pure JavaScript in one template',
+	description: 'tript is a freakin\' tiny template-engine which allows you to mixup JavaScript and HTML.',
 };
 
 // parse template, append to body
