@@ -48,7 +48,7 @@ document.body.innerHTML = T(template.innerHTML, context);
 
 #### Demo
 
-Go check out [this demo](http://codepen.io/misantronic/pen/ogNbBa) at codepen.io
+Go check out [this demo](http://codepen.io/misantronic/pen/ogNbBa) at codepen.io.
 
 #### Secrets
 
