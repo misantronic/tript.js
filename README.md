@@ -1,9 +1,10 @@
 ## tript
 
-> A tiny Template-Engine (224 bytes) mixing up HTML and pure JavaScript in one template
+> A tiny Template-Engine mixing up HTML and pure JavaScript in one template
 
 tript is a freakin' tiny template-engine which allows you to mixup JavaScript and HTML.<br>
-It's as easy as pie! You combine both languages - access variables - manipulate content - loop your way through your content - destroy the world, but this time in one template!
+It's as easy as pie! You combine both languages - access variables - manipulate content - loop your way through your content - destroy the world, but this time in one template!<br>
+And the best part: tript is so small! Only **224 bytes**!!   
 
 ### Example
 
