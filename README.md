@@ -52,7 +52,7 @@ Go check out [this demo](http://codepen.io/misantronic/pen/ogNbBa) at codepen.io
 #### Install with bower
 
 ```bash
-bower install tript
+$ bower install tript
 ```
 
 
