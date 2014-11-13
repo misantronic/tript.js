@@ -50,6 +50,13 @@ document.body.innerHTML = T(template.innerHTML, context);
 
 Go check out [this demo](http://codepen.io/misantronic/pen/ogNbBa) at codepen.io.
 
+#### Install with bower
+
+```bash
+bower install tript
+```
+
+
 #### Secrets
 
 - tript actually means template-script. Awesome!
