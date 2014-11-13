@@ -4,6 +4,8 @@
 
 <br><br>
 
+### Example
+
 ```html
 <!-- Embed tript -->
 <script src="tript.min.js"></script>
