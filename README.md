@@ -54,4 +54,24 @@ Go check out [this demo](http://codepen.io/misantronic/pen/ogNbBa) at codepen.io
 
 - tript actually means template-script. Awesome!
 - tript is only 224 bytes of mix-and-match-madness.
-- Zombies will kill your friends if you don't use tript.
+- Zombies will kill your friends if you don't use tript. *
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+( * Zombies will not kill your friends if you don't use tript. They'll eat you! )
