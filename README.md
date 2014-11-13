@@ -44,4 +44,6 @@ var context = {
 document.body.innerHTML = T(template.innerHTML, context);
 ```
 
-[Test the example at codepen](http://codepen.io/misantronic/pen/ogNbBa)
+#### Demo
+
+Go check out [this demo](http://codepen.io/misantronic/pen/ogNbBa) at codepen.io
