@@ -1,10 +1,10 @@
 # tript
 
-> A tiny Template-Engine mixing up HTML and pure JavaScript in one template
+> A tiny Template-Engine (224 bytes) mixing up HTML and pure JavaScript in one template
 
 ```html
 <!-- Embed tript -->
-<script src="../tript.min.js"></script>
+<script src="tript.min.js"></script>
 
 <!-- TEMPLATE -->
 <script id="template" type="text/html">
