@@ -26,7 +26,7 @@ Easy as pie you combine both languages - access variables - manipulate content -
 						date = posts[i].date,
 						body = posts[i].body;
 
-					<h2>#$i, $title on $date</h2>
+					<h2>#$i, $title on $date|format('mm.dd.yyyy')</h2>
 					<p>$body</p>
 
 				</div>
@@ -41,6 +41,12 @@ Easy as pie you combine both languages - access variables - manipulate content -
 ```
 
 ```javascript
+// Dummy function called from template
+Date.prototype.format = function(syntax) {
+	console.log(syntax);
+	return this.getMonth() +"."+ this.getDate() +"."+ this.getFullYear();
+};
+
 // set context
 var context = {
 	app: 'tript',
@@ -48,14 +54,14 @@ var context = {
 	description: 'tript is a freakin\' tiny template-engine which allows you to mixup JavaScript and HTML.',
 	posts: [
 		{
-			title: 'Big News!',
+			title: 'Big News',
 			date: new Date('2014-11-14'),
 			body: 'tript is great!'
 		},
 		{
-			title: 'Bad News!',
+			title: 'Bad News',
 			date: new Date('2014-11-11'),
-			body: 'tript doesnt exist :('
+			body: "tript doesn't exist yet :("
 		}
 	]
 };

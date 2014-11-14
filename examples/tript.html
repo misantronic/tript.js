@@ -2,11 +2,11 @@
 <html>
 <head lang="en">
 	<meta charset="UTF-8">
-	<title>tript v.0.1.0</title>
+	<title>tript v.0.2.0</title>
 	<style>body { font-family: Arial, sans-serif; font-size: 12px; }</style>
 
 	<!-- Embed tript -->
-	<script src="../tript.min.js"></script>
+	<script src="../tript.js"></script>
 
 	<!-- TEMPLATE -->
 	<script id="template" type="text/html">
@@ -23,7 +23,7 @@
 							date = posts[i].date,
 							body = posts[i].body;
 
-						<h2>#$i, $title on $date</h2>
+						<h2>#$i, $title on $date|format('mm.dd.yyyy')</h2>
 						<p>$body</p>
 
 					</div>
@@ -38,26 +38,33 @@
 </head>
 <body>
 	<script>
-	var context = {
-		app: 'tript',
-		headline: 'A tiny Template-Engine mixing up HTML and pure JavaScript in one template',
-		description: 'tript is a freakin\' tiny template-engine which allows you to mixup JavaScript and HTML.',
-		posts: [
-			{
-				title: 'Big News!',
-				date: new Date('2014-11-14'),
-				body: 'tript is great!'
-			},
-			{
-				title: 'Bad News!',
-				date: new Date('2014-11-11'),
-				body: 'tript doesnt exist :('
-			}
-		]
-	};
+		// Dummy function called from template
+		Date.prototype.format = function(syntax) {
+			console.log(syntax);
+			return this.getMonth() +"."+ this.getDate() +"."+ this.getFullYear();
+		};
 
-	// parse template
-	document.body.innerHTML = T(template.innerHTML, context);
+		// set context
+		var context = {
+			app: 'tript',
+			headline: 'A tiny Template-Engine mixing up HTML and pure JavaScript in one template',
+			description: 'tript is a freakin\' tiny template-engine which allows you to mixup JavaScript and HTML.',
+			posts: [
+				{
+					title: 'Big News',
+					date: new Date('2014-11-14'),
+					body: 'tript is great!'
+				},
+				{
+					title: 'Bad News',
+					date: new Date('2014-11-11'),
+					body: "tript doesn't exist yet :("
+				}
+			]
+		};
+
+		// parse template
+		document.body.innerHTML = T(template.innerHTML, context);
 	</script>
 </body>
 </html>
