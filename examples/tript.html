@@ -23,7 +23,7 @@
 							date = posts[i].date,
 							body = posts[i].body;
 
-						<h2>#$i, $title on $date|format('mm.dd.yyyy')</h2>
+						<h2>#$i, $title on $date.format()</h2>
 						<p>$body</p>
 
 					</div>
@@ -38,33 +38,32 @@
 </head>
 <body>
 	<script>
-		// Dummy function called from template
-		Date.prototype.format = function(syntax) {
-			console.log(syntax);
-			return this.getMonth() +"."+ this.getDate() +"."+ this.getFullYear();
-		};
+// called from template
+Date.prototype.format = function() {
+	return this.getMonth() +"."+ this.getDate() +"."+ this.getFullYear();
+};
 
-		// set context
-		var context = {
-			app: 'tript',
-			headline: 'A tiny Template-Engine mixing up HTML and pure JavaScript in one template',
-			description: 'tript is a freakin\' tiny template-engine which allows you to mixup JavaScript and HTML.',
-			posts: [
-				{
-					title: 'Big News',
-					date: new Date('2014-11-14'),
-					body: 'tript is great!'
-				},
-				{
-					title: 'Bad News',
-					date: new Date('2014-11-11'),
-					body: "tript doesn't exist yet :("
-				}
-			]
-		};
+// set context
+var context = {
+	app: 'tript',
+	headline: 'A tiny Template-Engine mixing up HTML and pure JavaScript in one template',
+	description: 'tript is a freakin\' tiny template-engine which allows you to mixup JavaScript and HTML.',
+	posts: [
+		{
+			title: 'Big News',
+			date: new Date('2014-11-14'),
+			body: 'tript is great!'
+		},
+		{
+			title: 'Bad News',
+			date: new Date('2014-11-11'),
+			body: "tript doesn't exist yet :("
+		}
+	]
+};
 
-		// parse template
-		document.body.innerHTML = T(template.innerHTML, context);
+// parse template
+document.body.innerHTML = T(template.innerHTML, context);
 	</script>
 </body>
 </html>

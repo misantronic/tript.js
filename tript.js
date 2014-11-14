@@ -16,8 +16,6 @@ function T(t, c, r) {
 				(a || c || d)
 					// replace quotes
 					[r](/"/g, '\\"')
-					// replace pipes (for modules)
-					[r](/\|/g, '.')
 					// inline javascript
 					[r](/<%(.*?)%>|\$(\w+(\.*\w+\([\s\S]*\))*)/g, '"+($1$2)+"') +'";'
 	}) + "}");

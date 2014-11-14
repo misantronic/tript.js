@@ -1,9 +1,44 @@
 ### tript
 
-> A tiny Template-Engine (258 bytes) mixing up HTML and pure JavaScript in one template
+> A tiny Template-Engine (244 bytes) mixing up HTML and pure JavaScript in one template
 
 tript is a tiny and simple template-engine which allows you to mixup JavaScript and HTML.<br>
 Easy as pie you combine both languages - access variables - manipulate content - loop the hell through stuff and finally destroy the world, but this time in one template!<br>
+
+#### Getting started
+
+It's easy.
+
+
+#### Variables
+
+Any context-member or variable is accessible inside any HTML-Tag via `$`.<br>
+To execute pure JavaScript in an HTML-Tag, use the `<% ... %>`-Tags.
+
+```html
+<h1>my awesome $app blog</h1>
+<p><% show ? description : '' %></p>
+```
+
+You can also call your own or existing prototype-functions:
+
+```javascript
+Date.prototype.output = function() {
+	return this.getMonth() +"."+ this.getDate() +"."+ this.getFullYear();
+};
+
+var date = new Date(),
+	age = 30;
+```
+
+```html
+<p>$date.format()</p>
+<p>$age.toString()</p>
+```
+
+#### Demo
+
+Go check out [this demo](http://codepen.io/misantronic/pen/ogNbBa) at codepen.io.
 
 #### Example
 
@@ -26,7 +61,7 @@ Easy as pie you combine both languages - access variables - manipulate content -
 						date = posts[i].date,
 						body = posts[i].body;
 
-					<h2>#$i, $title on $date|format('mm.dd.yyyy')</h2>
+					<h2>#$i, $title on $date.format()</h2>
 					<p>$body</p>
 
 				</div>
@@ -41,9 +76,8 @@ Easy as pie you combine both languages - access variables - manipulate content -
 ```
 
 ```javascript
-// Dummy function called from template
-Date.prototype.format = function(syntax) {
-	console.log(syntax);
+// called from template
+Date.prototype.output = function() {
 	return this.getMonth() +"."+ this.getDate() +"."+ this.getFullYear();
 };
 
@@ -70,10 +104,6 @@ var context = {
 document.body.innerHTML = T(template.innerHTML, context);
 ```
 
-#### Demo
-
-Go check out [this demo](http://codepen.io/misantronic/pen/ogNbBa) at codepen.io.
-
 #### Install with bower
 
 ```bash
@@ -84,7 +114,7 @@ $ bower install tript
 #### Secrets
 
 - tript actually means template-script. Awesome!
-- tript is only 258 bytes of mix-and-match-madness.
+- tript is only 244 bytes of mix-and-match-madness.
 - this script was inspired by [John Resig's Micro Templating](http://ejohn.org/blog/javascript-micro-templating/)
 - Zombies will kill your friends if you don't use tript. *
 
