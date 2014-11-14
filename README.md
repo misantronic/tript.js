@@ -73,12 +73,6 @@ var context = {
 document.body.innerHTML = T(template.innerHTML, context);
 ```
 
-#### Install with bower
-
-```bash
-$ bower install tript
-```
-
 #### Variables
 
 Any context-member or variable is accessible inside any HTML-Tag via `$`.<br>
@@ -105,6 +99,11 @@ var date = new Date(),
 <p>$age.toString()</p>
 ```
 
+#### Install with bower
+
+```bash
+$ bower install tript
+```
 
 #### Secrets
 
