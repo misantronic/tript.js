@@ -16,16 +16,17 @@
 			<p>$description</p>
 
 			var users = [ { name: 'David' }, { name: 'Max' }, { name: 'Bob' } ];
-			var _animal = "Crow";
+			var fav_animal = "Crow";
 
 			for(var i in users) {
 				<h3>
-					<b>Good guy <% users[i].name %></b>
+					var name = users[i].name;
+					<b>Good guy $name</b>
 				</h3>
 				<p>You are number $i</p>
 			}
 
-			<p>Your show know: my favorite animal is the $_animal</p>
+			<p>Your show know: my favorite animal is the $fav_animal</p>
 		</div>
 	</script>
 </head>
