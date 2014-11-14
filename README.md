@@ -23,7 +23,8 @@ Easy as pie you combine both languages - access variables - manipulate content -
 
 		for(var i in users) {
 			<h3>
-				<b>Good guy <% users[i].name %></b>
+				var name = users[i].name;
+                <b>Good guy $name</b>
 			</h3>
 			<p>You are number $i</p>
 		}
