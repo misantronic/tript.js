@@ -14,22 +14,28 @@ Easy as pie you combine both languages - access variables - manipulate content -
 <!-- TEMPLATE -->
 <script id="template" type="text/html">
 	<div id="content">
-		<h1>$app</h1>
+		<h1>my awesome $app blog</h1>
 		<div style="font-weight: bold;">$headline</div>
 		<p>$description</p>
 
-		var users = [ { name: 'David' }, { name: 'Max' }, { name: 'Bob' } ];
-		var _animal = "Crow";
+		<div id="posts">
 
-		for(var i in users) {
-			<h3>
-				var name = users[i].name;
-                <b>Good guy $name</b>
-			</h3>
-			<p>You are number $i</p>
-		}
+			for(var i in posts) {
+				<div class="post">
+					var title = posts[i].title,
+						date = posts[i].date,
+						body = posts[i].body;
 
-		<p>Your should know: my favorite animal is the $_animal</p>
+					<h2>#$i, $title on $date</h2>
+					<p>$body</p>
+
+				</div>
+			}
+
+		</div>
+
+		var fav_animal = "Crow";
+		<p>Your should know: my favorite animal is the <b>$fav_animal</b>.</p>
 	</div>
 </script>
 ```
@@ -40,9 +46,21 @@ var context = {
 	app: 'tript',
 	headline: 'A tiny Template-Engine mixing up HTML and pure JavaScript in one template',
 	description: 'tript is a freakin\' tiny template-engine which allows you to mixup JavaScript and HTML.',
+	posts: [
+		{
+			title: 'Big News!',
+			date: new Date('2014-11-14'),
+			body: 'tript is great!'
+		},
+		{
+			title: 'Bad News!',
+			date: new Date('2014-11-11'),
+			body: 'tript doesnt exist :('
+		}
+	]
 };
 
-// parse template, append to body
+// parse template
 document.body.innerHTML = T(template.innerHTML, context);
 ```
 
