@@ -5,37 +5,6 @@
 tript is a tiny and simple template-engine which allows you to mixup JavaScript and HTML.<br>
 Easy as pie you combine both languages - access variables - manipulate content - loop the hell through stuff and finally destroy the world, but this time in one template!<br>
 
-#### Getting started
-
-It's easy.
-
-
-#### Variables
-
-Any context-member or variable is accessible inside any HTML-Tag via `$`.<br>
-To execute pure JavaScript in an HTML-Tag, use the `<% ... %>`-Tags.
-
-```html
-<h1>my awesome $app blog</h1>
-<p><% show ? description : '' %></p>
-```
-
-You can also call your own or existing prototype-functions:
-
-```javascript
-Date.prototype.output = function() {
-	return this.getMonth() +"."+ this.getDate() +"."+ this.getFullYear();
-};
-
-var date = new Date(),
-	age = 30;
-```
-
-```html
-<p>$date.format()</p>
-<p>$age.toString()</p>
-```
-
 #### Demo
 
 Go check out [this demo](http://codepen.io/misantronic/pen/ogNbBa) at codepen.io.
@@ -108,6 +77,32 @@ document.body.innerHTML = T(template.innerHTML, context);
 
 ```bash
 $ bower install tript
+```
+
+#### Variables
+
+Any context-member or variable is accessible inside any HTML-Tag via `$`.<br>
+To execute pure JavaScript in an HTML-Tag, use the `<% ... %>`-Tags.
+
+```html
+<h1>my awesome $app blog</h1>
+<p><% show ? description : '' %></p>
+```
+
+You can also call your own or existing prototype-functions:
+
+```javascript
+Date.prototype.output = function() {
+	return this.getMonth() +"."+ this.getDate() +"."+ this.getFullYear();
+};
+
+var date = new Date(),
+	age = 30;
+```
+
+```html
+<p>$date.format()</p>
+<p>$age.toString()</p>
 ```
 
 
