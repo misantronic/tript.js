@@ -1,0 +1,28 @@
+{
+  "name": "tript",
+  "version": "0.2.0",
+  "description": "A tiny Template-Engine mixing up HTML and pure JavaScript in one template",
+  "main": "tript.min.js",
+  "directories": {
+    "example": "examples"
+  },
+  "dependencies": {
+    "grunt-cli": "^0.1.13"
+  },
+  "devDependencies": {
+    "grunt-contrib-uglify": "^0.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/misantronic/tript.git"
+  },
+  "author": "David Schkalee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/misantronic/tript/issues"
+  },
+  "homepage": "https://github.com/misantronic/tript"
+}
