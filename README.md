@@ -1,6 +1,6 @@
 ### tript
 
-> A tiny Template-Engine (224 bytes) mixing up HTML and pure JavaScript in one template
+> A tiny Template-Engine (258 bytes) mixing up HTML and pure JavaScript in one template
 
 tript is a tiny and simple template-engine which allows you to mixup JavaScript and HTML.<br>
 Easy as pie you combine both languages - access variables - manipulate content - loop the hell through stuff and finally destroy the world, but this time in one template!<br>
@@ -84,7 +84,7 @@ $ bower install tript
 #### Secrets
 
 - tript actually means template-script. Awesome!
-- tript is only 224 bytes of mix-and-match-madness.
+- tript is only 258 bytes of mix-and-match-madness.
 - this script was inspired by [John Resig's Micro Templating](http://ejohn.org/blog/javascript-micro-templating/)
 - Zombies will kill your friends if you don't use tript. *
 
