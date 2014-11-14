@@ -29,7 +29,7 @@ Easy as pie you combine both languages - access variables - manipulate content -
 			<p>You are number $i</p>
 		}
 
-		<p>Your show know: my favorite animal is the $_animal</p>
+		<p>Your should know: my favorite animal is the $_animal</p>
 	</div>
 </script>
 ```
