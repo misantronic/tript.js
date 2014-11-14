@@ -46,7 +46,7 @@ Go check out [this demo](http://codepen.io/misantronic/pen/ogNbBa) at codepen.io
 
 ```javascript
 // called from template
-Date.prototype.output = function() {
+Date.prototype.format = function() {
 	return this.getMonth() +"."+ this.getDate() +"."+ this.getFullYear();
 };
 
