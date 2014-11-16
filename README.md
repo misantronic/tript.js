@@ -86,7 +86,7 @@ To execute pure JavaScript in an HTML-Tag, use the `<% ... %>`-Tags.
 You can also call your own or existing prototype-functions:
 
 ```javascript
-Date.prototype.output = function() {
+Date.prototype.format = function() {
 	return this.getMonth() +"."+ this.getDate() +"."+ this.getFullYear();
 };
 
