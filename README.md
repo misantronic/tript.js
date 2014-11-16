@@ -73,7 +73,7 @@ var context = {
 document.body.innerHTML = T(template.innerHTML, context);
 ```
 
-#### Variables
+#### Good-to-know
 
 Any context-member or variable is accessible inside any HTML-Tag via `$`.<br>
 To execute pure JavaScript in an HTML-Tag, use the `<% ... %>`-Tags.
@@ -98,6 +98,8 @@ var date = new Date(),
 <p>$date.format()</p>
 <p>$age.toString()</p>
 ```
+
+Anything not embedded in `<...>`-tags will be executed as JavaScript.
 
 #### Install with bower
 
