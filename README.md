@@ -99,7 +99,7 @@ var date = new Date(),
 <p>$age.toString()</p>
 ```
 
-Anything not embedded in one line with an HTML-Tag will be executed as JavaScript.
+Anything not embedded in a line with an HTML-Tag will be executed as JavaScript.
 
 #### Install with bower
 
