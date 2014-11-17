@@ -83,7 +83,7 @@ To execute pure JavaScript in an HTML-Tag, use the `<% ... %>`-Tags.
 <p><% show ? description : '' %></p>
 ```
 
-You can also call your own or existing prototype-functions:
+You can also call your own or predefined prototype-functions:
 
 ```javascript
 Date.prototype.format = function() {
