@@ -12,12 +12,12 @@ function T(t, c, r, _) {
 		// set context
 		"with(c||{}){_='';" +
 		// match html-tags
-		t[r = "replace"](/(<(\w+) *.*>.*<\/\2>)|(<\w+ *.*>)|(<\/\w+>)/g, function(p, a, b, c, d) {
+		t[r = "replace"](/(<\w+.*>)|(<\/\w+>)/g, function(p, a, b) {
 			return '_+="'+
-				(a || c || d)
+				(a || b)
 					// replace quotes
 					[r](/"/g, '\\"')
 					// inline javascript
 					[r](/<%(.*?)%>|\$(\w+(\.*\w+\([\s\S]*\))*)/g, '"+($1$2)+"') +'";'
-	}) + "}");
+	}) + "}")
 }
