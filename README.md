@@ -110,7 +110,7 @@ $ bower install tript
 #### Secrets
 
 - tript actually means template-script. Awesome!
-- tript is only 242 bytes of mix-and-match-madness.
+- tript is only 211 bytes of mix-and-match-madness.
 - this script was inspired by [John Resig's Micro Templating](http://ejohn.org/blog/javascript-micro-templating/)
 - Zombies will kill your friends if you don't use tript. *
 
