@@ -1,6 +1,6 @@
 {
   "name": "tript",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A tiny Template-Engine mixing up HTML and pure JavaScript in one template",
   "main": "tript.min.js",
   "directories": {
