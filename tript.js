@@ -12,9 +12,9 @@ function T(t, c, r, _) {
 		// set context
 		"with(c||{}){_='';" +
 			// match html-tags
-		t[r = "replace"](/(<\w+.*>)|(<\/\w+>)/g, function(p, a, b) {
+		t[r = "replace"](/(?:\n|^)\s*(<.*)/g, function(p, a) {
 			return '_+="'+
-				(a || b)
+				a
 					// replace quotes
 					[r](/"/g, '\\"')
 					// inline javascript
