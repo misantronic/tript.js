@@ -1,6 +1,6 @@
 ### tript.js
 
-> A tiny Template-Engine (240 bytes) mixing up HTML and pure JavaScript in one template
+> A tiny Template-Engine (269 bytes) mixing up HTML and pure JavaScript in one template
 
 tript.js is a tiny and simple template-engine which allows you to mixup JavaScript and HTML.<br>
 You do what you would do with [handlebars](http://handlebarsjs.com/), [jsrender](https://github.com/borismoore/jsrender) or other template-engines but this time with pure and fast JavaScript.<br>
@@ -124,7 +124,7 @@ $('#wrapper').renderTript(template, context);
 #### Secrets
 
 - tript.js actually means template-script. Awesome!
-- tript.js is only 240 bytes of mix-and-match-madness.
+- tript.js is only 269 bytes of mix-and-match-madness.
 - this script was inspired by [John Resig's Micro Templating](http://ejohn.org/blog/javascript-micro-templating/)
 - Zombies will kill your friends if you don't use tript.js. *
 
