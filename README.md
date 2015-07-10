@@ -111,6 +111,14 @@ Anything not embedded in a line with an HTML-Tag will be executed as JavaScript.
 $ bower install tript
 ```
 
+#### jQuery plugin
+
+Use the jQuery plugin if you want to render templates direcly.
+
+```javascript
+$('#wrapper').renderTript(template, context);
+```
+
 #### Secrets
 
 - tript actually means template-script. Awesome!
