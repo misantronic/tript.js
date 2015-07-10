@@ -1,8 +1,8 @@
-### tript
+### tript.js
 
 > A tiny Template-Engine (240 bytes) mixing up HTML and pure JavaScript in one template
 
-tript is a tiny and simple template-engine which allows you to mixup JavaScript and HTML.<br>
+tript.js is a tiny and simple template-engine which allows you to mixup JavaScript and HTML.<br>
 You do what you would do with [handlebars](http://handlebarsjs.com/), [jsrender](https://github.com/borismoore/jsrender) or other template-engines but this time with pure and fast JavaScript.<br>
 
 #### Demo
@@ -12,7 +12,7 @@ Go check out [this demo](http://codepen.io/misantronic/pen/ogNbBa) at codepen.io
 #### Example
 
 ```html
-<!-- Embed tript -->
+<!-- Embed tript.js -->
 <script src="tript.min.js"></script>
 
 <!-- TEMPLATE -->
@@ -52,19 +52,19 @@ T.format = function(date) {
 
 // set context
 var context = {
-	app: 'tript',
+	app: 'tript.js',
 	headline: 'A tiny Template-Engine mixing up HTML and pure JavaScript in one template',
-	description: 'tript is a freakin\' tiny template-engine which allows you to mixup JavaScript and HTML.',
+	description: 'tript.js is a freakin\' tiny template-engine which allows you to mixup JavaScript and HTML.',
 	posts: [
 		{
 			title: 'Big News',
 			date: new Date('2014-11-14'),
-			body: 'tript is great!'
+			body: 'tript.js is great!'
 		},
 		{
 			title: 'Bad News',
 			date: new Date('2014-11-11'),
-			body: "tript doesn't exist yet :("
+			body: "tript.js doesn't exist yet :("
 		}
 	]
 };
@@ -123,10 +123,10 @@ $('#wrapper').renderTript(template, context);
 
 #### Secrets
 
-- tript actually means template-script. Awesome!
-- tript is only 240 bytes of mix-and-match-madness.
+- tript.js actually means template-script. Awesome!
+- tript.js is only 240 bytes of mix-and-match-madness.
 - this script was inspired by [John Resig's Micro Templating](http://ejohn.org/blog/javascript-micro-templating/)
-- Zombies will kill your friends if you don't use tript. *
+- Zombies will kill your friends if you don't use tript.js. *
 
 <br>
 <br>
@@ -146,4 +146,4 @@ $('#wrapper').renderTript(template, context);
 <br>
 <br>
 
-( * Zombies will not kill your friends if you don't use tript. They'll eat you alive! )
+( * Zombies will not kill your friends if you don't use tript.js. They'll eat you alive! )
