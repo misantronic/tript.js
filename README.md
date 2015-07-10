@@ -107,8 +107,6 @@ var date = new Date(),
 
 Possible errors in the template are output in the users console.
 
-<br><br>
-
 #### Install with bower
 
 ```bash
