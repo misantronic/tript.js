@@ -113,7 +113,7 @@ $ bower install tript
 
 #### jQuery plugin
 
-Use the jQuery plugin if you want to render templates directly.
+Use the jQuery plugin (dist/jquery.tript.min.js) if you want to render templates directly.
 
 ```javascript
 $('#wrapper').renderTript(template, context);
