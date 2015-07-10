@@ -136,4 +136,4 @@ $ bower install tript
 <br>
 <br>
 
-( * Zombies will not kill your friends if you don't use tript. They'll eat you! )
+( * Zombies will not kill your friends if you don't use tript. They'll eat you alive! )
