@@ -30,7 +30,7 @@ Go check out [this demo](http://codepen.io/misantronic/pen/ogNbBa) at codepen.io
 						date = posts[i].date,
 						body = posts[i].body;
 
-					<h2>#$i, $title on $date.format()</h2>
+					<h2>#$i, $title on $date|format</h2>
 					<p>$body</p>
 
 				</div>
@@ -46,8 +46,8 @@ Go check out [this demo](http://codepen.io/misantronic/pen/ogNbBa) at codepen.io
 
 ```javascript
 // called from template
-Date.prototype.format = function() {
-	return this.getMonth() +"."+ this.getDate() +"."+ this.getFullYear();
+T.format = function(date) {
+	return date.getMonth() +"."+ date.getDate() +"."+ date.getFullYear();
 };
 
 // set context
@@ -83,11 +83,15 @@ To execute pure JavaScript in an HTML-Tag, use the `<% ... %>`-Tags.
 <p><% show ? description : '' %></p>
 ```
 
-You can also call your own or predefined prototype-functions:
+You can also call your own or predefined helper-functions:
 
 ```javascript
-Date.prototype.format = function() {
-	return this.getMonth() +"."+ this.getDate() +"."+ this.getFullYear();
+T.format = function(date) {
+	return date.getMonth() +"."+ date.getDate() +"."+ date.getFullYear();
+};
+
+T.toString = function(mixed) {
+	return mixed.toString();
 };
 
 var date = new Date(),
@@ -95,8 +99,8 @@ var date = new Date(),
 ```
 
 ```html
-<p>$date.format()</p>
-<p>$age.toString()</p>
+<p>$date|format</p>
+<p>$age|toString</p>
 ```
 
 Anything not embedded in a line with an HTML-Tag will be executed as JavaScript.

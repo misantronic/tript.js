@@ -6,7 +6,7 @@
 	<style>body { font-family: Arial, sans-serif; font-size: 12px; }</style>
 
 	<!-- Embed tript -->
-	<script src="../tript.js"></script>
+	<script src="../dist/tript.min.js"></script>
 
 	<!-- TEMPLATE -->
 	<script id="template" type="text/html">
@@ -23,7 +23,7 @@
 							date = posts[i].date,
 							body = posts[i].body;
 
-						<h2>#$i, $title on $date.format()</h2>
+						<h2>#$i, $title on $date|format</h2>
 						<p>$body</p>
 
 					</div>
@@ -39,8 +39,8 @@
 <body>
 	<script>
 // called from template
-Date.prototype.format = function() {
-	return this.getMonth() +"."+ this.getDate() +"."+ this.getFullYear();
+T.format = function(date) {
+	return date.getMonth() +"."+ date.getDate() +"."+ date.getFullYear();
 };
 
 // set context
