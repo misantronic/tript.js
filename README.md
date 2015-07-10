@@ -105,6 +105,8 @@ var date = new Date(),
 
 **Anything not embedded in a line with an HTML-Tag will be executed as JavaScript.**
 
+Possible errors in the template are output in the users console.
+
 <br><br>
 
 #### Install with bower
