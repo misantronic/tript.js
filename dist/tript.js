@@ -8,7 +8,8 @@
  * @constructor
  */
 function T(t, c, r, _) {
-	return eval(
+	try {
+		return eval(
 		// set context
 		"with(c||{}){_='';" +
 			// match html-tags
@@ -20,4 +21,7 @@ function T(t, c, r, _) {
 					// inline javascript
 					[r](/<%(.*?)%>|\$(\w+(?:\.*[a-z0-9_[]]*)*)\|*([|\w]*)/gi, '"+ ("$3" ? T["$3"]($1$2) : ($1$2)) +"') +'";'
 		}) + "}")
+	} catch(e) {
+		console.log(e)
+	}
 }
