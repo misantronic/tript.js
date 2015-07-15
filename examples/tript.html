@@ -3,7 +3,7 @@
 <head lang="en">
 	<meta charset="UTF-8">
 	<title>tript v.0.2.0</title>
-	<style>body { font-family: Arial, sans-serif; font-size: 12px; }</style>
+	<style>body { font-family: Arial, sans-serif; font-size: 12px; } .bold { font-weight: bold; }</style>
 
 	<!-- Embed tript -->
 	<script src="../dist/tript.js"></script>
@@ -12,19 +12,15 @@
 	<script id="template" type="text/html">
 		<div id="content">
 			<h1>my awesome $app blog</h1>
-			<div style="font-weight: bold;">$headline</div>
+			<div class="bold">$headline</div>
+			<div>Escaped Url: $url|escape</div>
 			<p>$description</p>
 
 			<div id="posts">
 				for(var i in posts) {
 					<div class="post">
-						var title = posts[i].title,
-							date = posts[i].date,
-							body = posts[i].body;
-
-						<h2>#$i, $title on $date|format</h2>
-						<p>$body</p>
-
+						<h2>#$i, $posts[i].title on $posts[i].date|format</h2>
+						<p>$posts[i].body</p>
 					</div>
 				}
 			</div>
@@ -36,32 +32,37 @@
 </head>
 <body>
 	<script>
-// called from template
-T.format = function(date) {
-	return date.getMonth() +"."+ date.getDate() +"."+ date.getFullYear();
-};
+	// called from template
+	T.format = function(date) {
+		return date.getMonth() +"."+ date.getDate() +"."+ date.getFullYear();
+	};
 
-// set context
-var context = {
-	app: 'tript',
-	headline: 'A tiny Template-Engine mixing up HTML and pure JavaScript in one template',
-	description: 'tript is a freakin\' tiny template-engine which allows you to mixup JavaScript and HTML.',
-	posts: [
-		{
-			title: 'Big News',
-			date: new Date('2014-11-14'),
-			body: 'tript is great!'
-		},
-		{
-			title: 'Bad News',
-			date: new Date('2014-11-11'),
-			body: "tript doesn't exist yet :("
-		}
-	]
-};
+	T.escape = function(str) {
+		return encodeURIComponent(str);
+	};
 
-// parse template
-document.body.innerHTML = T(template.innerHTML, context);
+	// set context
+	var context = {
+		app: 'tript',
+		headline: 'A tiny Template-Engine mixing up HTML and pure JavaScript in one template',
+		description: 'tript is a freakin\' tiny template-engine which allows you to mixup JavaScript and HTML.',
+		url: 'https://github.com/misantronic/tript.js',
+		posts: [
+			{
+				title: 'Big News',
+				date: new Date('2014-11-14'),
+				body: 'tript is great!'
+			},
+			{
+				title: 'Bad News',
+				date: new Date('2014-11-11'),
+				body: "tript doesn't exist yet :("
+			}
+		]
+	};
+
+	// parse template
+	document.body.innerHTML = T(template.innerHTML, context);
 	</script>
 </body>
 </html>
